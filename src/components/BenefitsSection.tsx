@@ -32,7 +32,7 @@ const BenefitsSection = () => {
           <h2 className="text-4xl md:text-5xl font-bold">
             Why Property Teams{" "}
             <span className="text-transparent bg-clip-text bg-gradient-primary">
-              Love Cold Bot
+              Love LeadCaller AI
             </span>
           </h2>
         </div>
