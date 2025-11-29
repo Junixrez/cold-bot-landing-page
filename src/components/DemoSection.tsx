@@ -10,11 +10,11 @@ const DemoSection = () => {
           <h2 className="text-4xl md:text-5xl font-bold">
             See{" "}
             <span className="text-transparent bg-clip-text bg-gradient-primary">
-              Cold Bot in Action
+              LeadCaller AI in Action
             </span>
           </h2>
           <p className="text-lg text-muted-foreground">
-            Listen to a real example of Cold Bot qualifying a property lead
+            Listen to a real example of LeadCaller AI qualifying a property lead
           </p>
         </div>
         
@@ -50,7 +50,7 @@ const DemoSection = () => {
             </div>
             
             <p className="text-center text-muted-foreground max-w-xl">
-              This demo showcases Cold Bot naturally conversing with a potential buyer, 
+              This demo showcases LeadCaller AI naturally conversing with a potential buyer, 
               collecting their budget range, preferred locations, and desired property type 
               before scheduling a viewing appointment.
             </p>

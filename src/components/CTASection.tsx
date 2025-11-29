@@ -12,7 +12,7 @@ const CTASection = () => {
           <h2 className="text-4xl md:text-5xl font-bold">
             Interested in{" "}
             <span className="text-transparent bg-clip-text bg-gradient-primary">
-              Cold Bot or My Work?
+              LeadCaller AI or My Work?
             </span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
@@ -27,7 +27,7 @@ const CTASection = () => {
             <div className="space-y-2">
               <h3 className="font-bold text-2xl">For Property Businesses</h3>
               <p className="text-muted-foreground">
-                See how Cold Bot can transform your cold calling process
+                See how LeadCaller AI can transform your cold calling process
               </p>
             </div>
             

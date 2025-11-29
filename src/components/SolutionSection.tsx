@@ -11,7 +11,7 @@ const steps = [
   {
     icon: Phone,
     step: "Step 2",
-    title: "Cold Bot calls using Bland AI",
+    title: "LeadCaller AI calls using Bland AI",
     description: "Natural, human-like voice conversations powered by Bland AI. Customizable scripts tailored for property viewings and sales."
   },
   {
@@ -28,11 +28,8 @@ const SolutionSection = () => {
       <div className="container mx-auto max-w-6xl">
         <div className="text-center mb-16 space-y-4">
           <h2 className="text-4xl md:text-5xl font-bold">
-            Cold Bot{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-primary">
-              Calls, Qualifies, and Books
-            </span>{" "}
-            for You
+            <span className="text-transparent bg-clip-text bg-gradient-primary">LeadCaller AI</span>{" "}
+            Calls, Qualifies, and Books for You
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             Built with Bland AI for robust, reliable voice conversations

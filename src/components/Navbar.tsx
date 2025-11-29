@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
-import logo from "@/assets/logo.png";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -20,8 +19,11 @@ const Navbar = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex items-center gap-2 cursor-pointer" onClick={() => scrollToSection("hero")}>
-            <img src={logo} alt="Cold Bot" className="h-8 w-auto" />
-            <span className="text-xl font-bold text-foreground">Cold Bot</span>
+            <span className="text-2xl font-extrabold">
+              <span className="text-transparent bg-clip-text bg-gradient-primary">Lead</span>
+              <span className="text-foreground">Caller</span>
+              <span className="text-accent"> AI</span>
+            </span>
           </div>
 
           {/* Desktop Navigation */}
