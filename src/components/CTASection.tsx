@@ -12,7 +12,7 @@ const CTASection = () => {
           <h2 className="text-4xl md:text-5xl font-bold">
             Interested in{" "}
             <span className="text-transparent bg-clip-text bg-gradient-primary">
-              LeadCaller AI or My Work?
+              LeadCaller AI or Our Work?
             </span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
