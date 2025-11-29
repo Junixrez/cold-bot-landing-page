@@ -22,7 +22,7 @@ const skills = [
 
 const TechStackSection = () => {
   return (
-    <section className="py-24 px-4 bg-muted/30">
+    <section id="tech-stack" className="py-24 px-4 bg-muted/30">
       <div className="container mx-auto max-w-6xl">
         <div className="text-center mb-16 space-y-4">
           <Badge variant="outline" className="px-4 py-2 text-sm border-accent/30">

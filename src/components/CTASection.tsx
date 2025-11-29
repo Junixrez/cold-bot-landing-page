@@ -6,7 +6,7 @@ import { PhoneCall, Mail, Linkedin, Github } from "lucide-react";
 
 const CTASection = () => {
   return (
-    <section className="py-24 px-4">
+    <section id="contact" className="py-24 px-4">
       <div className="container mx-auto max-w-6xl">
         <div className="text-center mb-16 space-y-4">
           <h2 className="text-4xl md:text-5xl font-bold">
