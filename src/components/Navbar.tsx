@@ -1,9 +1,12 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { Menu, X } from "lucide-react";
+import { Switch } from "@/components/ui/switch";
+import { Menu, X, Moon, Sun } from "lucide-react";
+import { useTheme } from "next-themes";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const { theme, setTheme } = useTheme();
 
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
@@ -27,7 +30,7 @@ const Navbar = () => {
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-8">
+          <div className="hidden md:flex items-center gap-6">
             <button
               onClick={() => scrollToSection("features")}
               className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
@@ -52,6 +55,17 @@ const Navbar = () => {
             >
               Contact
             </button>
+            
+            {/* Theme Toggle */}
+            <div className="flex items-center gap-2">
+              <Sun className="h-4 w-4 text-muted-foreground" />
+              <Switch
+                checked={theme === "dark"}
+                onCheckedChange={(checked) => setTheme(checked ? "dark" : "light")}
+              />
+              <Moon className="h-4 w-4 text-muted-foreground" />
+            </div>
+            
             <Button size="sm" variant="accent" onClick={() => scrollToSection("contact")}>
               Book Demo
             </Button>
@@ -94,6 +108,18 @@ const Navbar = () => {
             >
               Contact
             </button>
+            
+            {/* Theme Toggle */}
+            <div className="flex items-center gap-3 py-2">
+              <Sun className="h-4 w-4 text-muted-foreground" />
+              <Switch
+                checked={theme === "dark"}
+                onCheckedChange={(checked) => setTheme(checked ? "dark" : "light")}
+              />
+              <Moon className="h-4 w-4 text-muted-foreground" />
+              <span className="text-sm text-muted-foreground ml-2">Dark Mode</span>
+            </div>
+            
             <Button size="sm" variant="accent" className="w-full" onClick={() => scrollToSection("contact")}>
               Book Demo
             </Button>
