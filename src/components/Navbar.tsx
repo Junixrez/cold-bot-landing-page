@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Switch } from "@/components/ui/switch";
 import { Menu, X, Moon, Sun } from "lucide-react";
@@ -6,7 +6,12 @@ import { useTheme } from "next-themes";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const { theme, setTheme } = useTheme();
+  const { theme, setTheme, resolvedTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
@@ -16,14 +21,23 @@ const Navbar = () => {
     }
   };
 
+  const isDark = mounted
+    ? theme === "dark" || (theme === "system" && resolvedTheme === "dark")
+    : false;
+
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-lg border-b border-border/40">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <div className="flex items-center gap-2 cursor-pointer" onClick={() => scrollToSection("hero")}>
+          <div
+            className="flex items-center gap-2 cursor-pointer"
+            onClick={() => scrollToSection("hero")}
+          >
             <span className="text-2xl font-extrabold">
-              <span className="text-transparent bg-clip-text bg-gradient-primary">Lead</span>
+              <span className="text-transparent bg-clip-text bg-gradient-primary">
+                Lead
+              </span>
               <span className="text-foreground">Caller</span>
               <span className="text-accent"> AI</span>
             </span>
@@ -55,18 +69,24 @@ const Navbar = () => {
             >
               Contact
             </button>
-            
+
             {/* Theme Toggle */}
             <div className="flex items-center gap-2">
               <Sun className="h-4 w-4 text-muted-foreground" />
               <Switch
-                checked={theme === "dark"}
-                onCheckedChange={(checked) => setTheme(checked ? "dark" : "light")}
+                checked={isDark}
+                onCheckedChange={(checked) =>
+                  setTheme(checked ? "dark" : "light")
+                }
               />
               <Moon className="h-4 w-4 text-muted-foreground" />
             </div>
-            
-            <Button size="sm" variant="accent" onClick={() => scrollToSection("contact")}>
+
+            <Button
+              size="sm"
+              variant="accent"
+              onClick={() => scrollToSection("contact")}
+            >
               Book Demo
             </Button>
           </div>
@@ -108,19 +128,28 @@ const Navbar = () => {
             >
               Contact
             </button>
-            
+
             {/* Theme Toggle */}
             <div className="flex items-center gap-3 py-2">
               <Sun className="h-4 w-4 text-muted-foreground" />
               <Switch
-                checked={theme === "dark"}
-                onCheckedChange={(checked) => setTheme(checked ? "dark" : "light")}
+                checked={isDark}
+                onCheckedChange={(checked) =>
+                  setTheme(checked ? "dark" : "light")
+                }
               />
               <Moon className="h-4 w-4 text-muted-foreground" />
-              <span className="text-sm text-muted-foreground ml-2">Dark Mode</span>
+              <span className="text-sm text-muted-foreground ml-2">
+                Dark Mode
+              </span>
             </div>
-            
-            <Button size="sm" variant="accent" className="w-full" onClick={() => scrollToSection("contact")}>
+
+            <Button
+              size="sm"
+              variant="accent"
+              className="w-full"
+              onClick={() => scrollToSection("contact")}
+            >
               Book Demo
             </Button>
           </div>

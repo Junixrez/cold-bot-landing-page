@@ -5,15 +5,18 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row justify-between items-center gap-6">
           <div className="flex items-center gap-3">
             <span className="text-2xl font-extrabold">
-              <span className="text-transparent bg-clip-text bg-gradient-primary">Lead</span>
+              <span className="text-transparent bg-clip-text bg-gradient-primary">
+                Lead
+              </span>
               <span className="text-foreground">Caller</span>
               <span className="text-accent"> AI</span>
             </span>
           </div>
-          
+
           <div className="text-center md:text-right text-muted-foreground">
             <p className="text-sm">
-              © 2024 LeadCaller AI. A graduation project showcasing full-stack development.
+              © 2025 LeadCaller AI. A graduation project showcasing full-stack
+              development.
             </p>
             <p className="text-xs mt-1">
               Built with Bland AI, Node.js, React, and MongoDB
