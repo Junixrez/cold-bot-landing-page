@@ -6,7 +6,7 @@ import logo from "@/assets/logo.png";
 
 const Hero = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16">
       {/* Background gradient effect */}
       <div className="absolute inset-0 bg-gradient-hero pointer-events-none" />
       
